@@ -15,7 +15,7 @@ export default function Signup() {
   const handleSubmit = async (e) => {
     e.preventDefault()
     try {
-      const response = await fetch('http://localhost:4000/auth/signup', {
+      const response = await fetch('https://ecommercebackend-topaz.vercel.app/auth/signup', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name, email, password, phone }),

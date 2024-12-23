@@ -21,7 +21,7 @@ const SellerSignup = () => {
     setErrorMessage('');
 
     try {
-      const response = await fetch('http://localhost:4000/seller/signup', {
+      const response = await fetch('https://ecommercebackend-topaz.vercel.app/seller/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
