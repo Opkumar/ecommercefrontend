@@ -11,7 +11,7 @@ export default function Cart() {
   useEffect(() => {
     const fetchCart = async () => {
       try {
-        const response = await fetch('https://ecommercebackend-topaz.vercel.app/cart/get-cart', {
+        const response = await fetch('https://ecommercebackend-main-drab.vercel.app/cart/get-cart', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ userId: 'user123' }),
@@ -34,7 +34,7 @@ export default function Cart() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await fetch('https://ecommercebackend-topaz.vercel.app/get-product');
+        const response = await fetch('https://ecommercebackend-main-drab.vercel.app/get-product');
         if (response.ok) {
           const data = await response.json();
           if (data) {
@@ -58,7 +58,7 @@ export default function Cart() {
 
   const removeFromCart = async (productId) => {
     try {
-      const response = await fetch('https://ecommercebackend-topaz.vercel.app/cart/delete-items', {
+      const response = await fetch('https://ecommercebackend-main-drab.vercel.app/cart/delete-items', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ userId: 'user123', productId }),

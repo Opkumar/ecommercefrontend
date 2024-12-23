@@ -23,7 +23,7 @@ const AddProduct = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('https://ecommercebackend-topaz.vercel.app/create-product', {
+      const response = await fetch('https://ecommercebackend-main-drab.vercel.app/create-product', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

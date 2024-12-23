@@ -21,7 +21,7 @@ const SellerSignup = () => {
     setErrorMessage('');
 
     try {
-      const response = await fetch('https://ecommercebackend-topaz.vercel.app/seller/signup', {
+      const response = await fetch('https://ecommercebackend-main-drab.vercel.app/seller/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

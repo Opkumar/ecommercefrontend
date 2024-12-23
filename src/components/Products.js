@@ -8,7 +8,7 @@ export default function Products() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await fetch('https://ecommercebackend-topaz.vercel.app/get-product')
+        const response = await fetch('https://ecommercebackend-main-drab.vercel.app/get-product')
         if (response.ok) {
           const data = await response.json()
           setProducts(data.products)
@@ -25,7 +25,7 @@ export default function Products() {
 
   const addToCart = async (productId) => {
     try {
-      const response = await fetch('https://ecommercebackend-topaz.vercel.app/cart/addtocart', {
+      const response = await fetch('https://ecommercebackend-main-drab.vercel.app/cart/addtocart', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ userId: 'user123', productId, quantity: 1 }),

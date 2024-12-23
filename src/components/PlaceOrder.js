@@ -22,7 +22,7 @@ function PlaceOrder() {
     const fetchCartAndProducts = async () => {
       try {
         const userId = localStorage.getItem('userId');
-        const cartResponse = await fetch('https://ecommercebackend-topaz.vercel.app/cart/get-cart', {
+        const cartResponse = await fetch('https://ecommercebackend-main-drab.vercel.app/cart/get-cart', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ userId }),
@@ -31,7 +31,7 @@ function PlaceOrder() {
         if (!cartResponse.ok) throw new Error('Failed to fetch cart');
         const cartData = await cartResponse.json();
 
-        const productResponse = await fetch('https://ecommercebackend-topaz.vercel.app/get-product');
+        const productResponse = await fetch('https://ecommercebackend-main-drab.vercel.app/get-product');
         if (!productResponse.ok) throw new Error('Failed to fetch products');
         const productData = await productResponse.json();
 
@@ -78,7 +78,7 @@ function PlaceOrder() {
         return;
       }
 
-      const orderResponse = await fetch('https://ecommercebackend-topaz.vercel.app/order/place', {
+      const orderResponse = await fetch('https://ecommercebackend-main-drab.vercel.app/order/place', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -92,7 +92,7 @@ function PlaceOrder() {
 
       if (!orderResponse.ok) throw new Error('Failed to place order');
 
-      const clearCartResponse = await fetch('https://ecommercebackend-topaz.vercel.app/cart/clear', {
+      const clearCartResponse = await fetch('https://ecommercebackend-main-drab.vercel.app/cart/clear', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ userId }),
